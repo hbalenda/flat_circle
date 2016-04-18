@@ -9,6 +9,7 @@ class User < ApplicationRecord
     uniqueness: { case_sensitive: false },
     length: { minimum: 3, maximum: 100 }
   has_secure_password
+  has_many :trends
 
   def generate_auth_token
     loop do
