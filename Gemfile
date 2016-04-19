@@ -11,7 +11,7 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 # Used for encrypting User passwords
 gem 'bcrypt'
-gem 'active_model_serializers'
+gem 'active_model_serializers', github: "rails-api/active_model_serializers"
 
 group :development, :test do
   gem 'faker'
