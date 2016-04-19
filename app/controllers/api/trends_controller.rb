@@ -15,6 +15,6 @@ class Api::TrendsController < ApiController
 
   private
   def trend_params
-    params.require(:trend).permit(:name)
+    params.require(:trend).permit(:name, :user_id)
   end
 end
