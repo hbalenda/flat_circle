@@ -13,6 +13,16 @@ class Api::TrendsController < ApiController
     end
   end
 
+  def destroy
+    begin
+      trend =Trend.find(params[:id])
+      trend.destroy
+      render json: {}, status: :no_content
+    rescue ActiveRecord::RecordNotFound
+      render json: {}, status: :not_found
+    end
+  end
+
   private
   def trend_params
     params.require(:trend).permit(:name, :user_id)
