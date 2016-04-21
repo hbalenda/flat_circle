@@ -16,6 +16,7 @@ gem 'active_model_serializers', github: "rails-api/active_model_serializers"
 group :development, :test do
   gem 'faker'
   gem 'pry-rails'
+  gem 'rubocop', require: false
 end
 
 group :test do
