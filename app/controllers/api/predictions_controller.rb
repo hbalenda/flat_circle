@@ -1,21 +1,17 @@
 class Api::PredictionsController < ApiController
   before_action :authenticate_user
 
-  def create
-    Prediction.new(prediction_params)
-  end
-
-  def index
+  def show
     #return each trend where crystal_ball(year) returns true
     #if future, generate prediction w/name and return json
-    Trend.find_each do |trend|
-      trend.predictions.crystal_ball(year) == true
+    @prediction = Prediction.find(params[:id])
+    @year = @prediction.year
+    arr = []
+    Trend.all.each do |trend|
+      if @prediction.crystal_ball(trend, @year) == true
+        arr << trend.name
+      end
     end
-  end
-
-  private
-
-  def prediction_params
-    params.require(:prediction).permit(:name)
+    render json: arr
   end
 end

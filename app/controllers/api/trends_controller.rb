@@ -1,6 +1,5 @@
 class Api::TrendsController < ApiController
   before_action :authenticate_user
-  after_create :create_prediction
 
   def index
     trends = Trend.all
@@ -23,12 +22,7 @@ class Api::TrendsController < ApiController
   rescue ActiveRecord::RecordNotFound
     render json: {}, status: :not_found
   end
-
-  def create_prediction
-    trend = Trend.find(params[:id])
-    Prediction.create(trend_id: trend.id)
-  end
-
+  
   private
 
   def trend_params

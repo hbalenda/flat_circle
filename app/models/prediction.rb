@@ -1,12 +1,11 @@
 class Prediction < ApplicationRecord
-  belongs_to :trend
 
-  def crystal_ball(year)
-    calc_averages
-    if year < Date.today.year
+  def crystal_ball(trend, year)
+    calc_averages(trend)
+    last_endyear = @occurrences.flatten.last
+    if year <= last_endyear
       @occurrences.any? {|x| year.between?(x.first, x.last)}
     else
-      last_endyear = @occurrences.flatten.last
       prediction = (year - last_endyear) % (@avg_period + @avg_lull)
       if (prediction > @avg_lull)
         true
@@ -16,7 +15,7 @@ class Prediction < ApplicationRecord
     end
   end
 
-  def calc_averages
+  def calc_averages(trend)
     #generate array of each occurrence's startyear and endyear e.g. [[1960, 1970], [1990, 2000]]
     @occurrences = trend.occurrences.pluck(:startyear, :endyear)
     @periods = []
