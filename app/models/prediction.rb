@@ -1,4 +1,5 @@
 class Prediction < ApplicationRecord
+  validates :year, numericality: { only_integer: true }, presence: true
 
   def crystal_ball(trend, year)
     calc_averages(trend)
