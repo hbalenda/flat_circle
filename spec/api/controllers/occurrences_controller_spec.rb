@@ -44,7 +44,7 @@ RSpec.describe Api::OccurrencesController, type: :controller do
 
     describe "POST create" do
       before do
-        post :create, params: { occurrence: { name: @occurrence.name, startyear: @occurrence.startyear, endyear: @occurrence.endyear, trend_id: @trend.id }, trend_id: @trend.id }
+        post :create, params: { occurrence: { name: "Boy Bands", startyear: 2030, endyear: 2040, trend_id: @trend.id }, trend_id: @trend.id }
       end
 
       it "POST create returns http authenticated" do
@@ -57,7 +57,7 @@ RSpec.describe Api::OccurrencesController, type: :controller do
 
       it "creates a occurrence with the correct attributes" do
         hashed_json = JSON.parse(response.body)
-        expect(hashed_json["name"]).to eq(@occurrence.name)
+        expect(hashed_json["name"]).to eq("Boy Bands")
       end
     end
 
