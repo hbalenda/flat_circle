@@ -1,5 +1,6 @@
 class Api::TrendsController < ApiController
   before_action :authenticate_user
+
   def index
     trends = Trend.all
     render json: trends, each_serializer: TrendSerializer
@@ -16,10 +17,11 @@ class Api::TrendsController < ApiController
 
   def destroy
     trend = Trend.find(params[:id])
-    trend.destroy
-    render json: {}, status: :no_content
-  rescue ActiveRecord::RecordNotFound
-    render json: {}, status: :not_found
+    if trend.destroy
+      render json: { message: 'Trend destroyed', status: 200 }, status: 200
+    else
+      render json: { message: 'Trend destroy failed', status: 400 }, status: 400
+    end
   end
 
   private

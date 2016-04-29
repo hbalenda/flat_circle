@@ -12,7 +12,7 @@ end
 
 trends = Trend.all
 
-100.times do
+200.times do
   FactoryGirl.create(:occurrence)
 end
 

@@ -1,0 +1,20 @@
+sudo: false
+cache: bundler
+
+language: ruby
+rvm:
+  - 2.2.4
+
+services: postgres
+
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+
+script:
+  - bundle exec rake spec
+  - bundle exec rubocop app/ spec/
+
+notifications:
+  recipients:
+    - hcbviolet@gmail.com

@@ -9,7 +9,7 @@ class Api::OccurrencesController < ApiController
   def create
     occurrence = Occurrence.new(occurrence_params)
     if occurrence.save
-      render json: trend
+      render json: occurrence
     else
       render json: { errors: occurrence.errors.full_messages }, status: :unprocessable_entity
     end
@@ -17,10 +17,11 @@ class Api::OccurrencesController < ApiController
 
   def destroy
     occurrence = Occurrence.find(params[:id])
-    occurrence.destroy
-    render json: {}, status: :no_content
-  rescue ActiveRecord::RecordNotFound
-    render json: {}, status: :not_found
+    if occurrence.destroy
+      render json: { message: 'Occurrence destroyed', status: 200 }, status: 200
+    else
+      render json: { message: 'Occurrence destroy failed', status: 400 }, status: 400
+    end
   end
 
   private

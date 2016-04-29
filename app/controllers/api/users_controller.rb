@@ -16,10 +16,11 @@ class Api::UsersController < ApiController
 
   def destroy
     user = User.find(params[:id])
-    user.destroy
-    render json: {}, status: :no_content
-  rescue ActiveRecord::RecordNotFound
-    render json: {}, status: :not_found
+    if user.destroy
+      render json: { message: 'User destroyed', status: 200 }, status: 200
+    else
+      render json: { message: 'User destroy failed', status: 400 }, status: 400
+    end
   end
 
   private
