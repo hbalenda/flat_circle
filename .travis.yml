@@ -13,7 +13,7 @@ before_script:
 
 script:
   - bundle exec rake spec
-  - bundle exec rubocop
+  - bundle exec rubocop app/ spec/
 
 notifications:
   recipients:
