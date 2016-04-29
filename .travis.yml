@@ -12,7 +12,7 @@ before_script:
   - bundle exec rake db:migrate
 
 script:
-  - bundle exec rake app:spec
+  - bundle exec rake spec
   - bundle exec rake rubocop app/ spec/
 
 notifications:
