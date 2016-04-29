@@ -18,9 +18,9 @@ class Api::TrendsController < ApiController
   def destroy
     trend = Trend.find(params[:id])
     if trend.destroy
-      render json: {message: "Trend destroyed", status: 200}, status: 200
+      render json: { message: 'Trend destroyed', status: 200 }, status: 200
     else
-      render json: {message: "Trend destroy failed", status: 400}, status: 400
+      render json: { message: 'Trend destroy failed', status: 400 }, status: 400
     end
   end
 

@@ -18,9 +18,9 @@ class Api::OccurrencesController < ApiController
   def destroy
     occurrence = Occurrence.find(params[:id])
     if occurrence.destroy
-      render json: {message: "Occurrence destroyed", status: 200}, status: 200
+      render json: { message: 'Occurrence destroyed', status: 200 }, status: 200
     else
-      render json: {message: "Occurrence destroy failed", status: 400}, status: 400
+      render json: { message: 'Occurrence destroy failed', status: 400 }, status: 400
     end
   end
 

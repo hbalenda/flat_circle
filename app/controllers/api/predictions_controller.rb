@@ -6,9 +6,7 @@ class Api::PredictionsController < ApiController
     @year = @prediction.year
     arr = []
     Trend.all.each do |trend|
-      if @prediction.crystal_ball(trend, @year) == true
-        arr << trend.name
-      end
+      arr << trend.name if @prediction.crystal_ball(trend, @year) == true
     end
     render json: arr
   end

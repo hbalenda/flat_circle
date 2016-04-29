@@ -17,9 +17,9 @@ class Api::UsersController < ApiController
   def destroy
     user = User.find(params[:id])
     if user.destroy
-      render json: {message: "User destroyed", status: 200}, status: 200
+      render json: { message: 'User destroyed', status: 200 }, status: 200
     else
-      render json: {message: "User destroy failed", status: 400}, status: 400
+      render json: { message: 'User destroy failed', status: 400 }, status: 400
     end
   end
 

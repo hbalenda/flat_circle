@@ -4,5 +4,5 @@ class Occurrence < ApplicationRecord
   validates :startyear, numericality: { only_integer: true }
   validates_uniqueness_of :startyear, scope: :trend_id
   validates :endyear, numericality: { only_integer: true }
-  default_scope { order ('startyear ASC') }
+  default_scope { order 'startyear ASC' }
 end
