@@ -1,3 +1,17 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'app/views/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/models/prediction.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'app/models/prediction.rb'
+
 Style/Documentation:
   Enabled: false
 
