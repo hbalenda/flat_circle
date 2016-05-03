@@ -24,6 +24,8 @@ group :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
   gem 'shoulda'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

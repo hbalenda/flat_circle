@@ -6,8 +6,8 @@ RSpec.describe Api::TrendsController, type: :controller do
     @trend = FactoryGirl.create(:trend, user_id: @user.id)
   end
 
-  context 'Unauthenticated user' do
-    it 'GET index returns http unauthenticated' do
+  context 'Unauthenticated user', :vcr do
+    it 'GET index returns http unauthenticated', :vcr do
       get :index
       expect(response).to have_http_status(401)
     end
