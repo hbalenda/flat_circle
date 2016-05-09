@@ -104,7 +104,6 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    mustache (0.99.8)
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -136,10 +135,6 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    rspec (3.1.0)
-      rspec-core (~> 3.1.0)
-      rspec-expectations (~> 3.1.0)
-      rspec-mocks (~> 3.1.0)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -156,11 +151,6 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
-    rspec_api_documentation (4.7.0)
-      activesupport (>= 3.0.0)
-      json (~> 1.4, >= 1.4.6)
-      mustache (~> 0.99, >= 0.99.4)
-      rspec (>= 3.0.0)
     rubocop (0.39.0)
       parser (>= 2.3.0.7, < 3.0)
       powerpack (~> 0.1)
@@ -214,7 +204,6 @@ DEPENDENCIES
   puma (~> 3.0)
   rails!
   rspec-rails
-  rspec_api_documentation
   rubocop
   shoulda
   simplecov
