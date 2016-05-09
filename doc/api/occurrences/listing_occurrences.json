@@ -1,0 +1,67 @@
+{
+  "resource": "Occurrences",
+  "http_method": "GET",
+  "route": "api/trends/:trend_id/occurrences",
+  "description": "Listing occurrences",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "occurrence",
+      "description": "Occurrence"
+    },
+    {
+      "name": "name",
+      "description": "Name"
+    },
+    {
+      "name": "startyear",
+      "description": "Start Year"
+    },
+    {
+      "name": "endyear",
+      "description": "End Year"
+    },
+    {
+      "name": "trend_id",
+      "description": "Trend ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/trends/173/occurrences?occurrence=%23%3COccurrence%3A0x007faae2751ab8%3E&name=try-hard&startyear=1732&endyear=1789",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"05e0Rqwjptt/O/G31ZjblS5dD9jBrgrLutBWVLIo/1MCJy9aF91lL5WEBRskeJYDwtWOZs15UoHzK045STwQ3w==\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "occurrence": "#<Occurrence:0x007faae2751ab8>",
+        "name": "try-hard",
+        "startyear": "1732",
+        "endyear": "1789"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 74,\n    \"trend_id\": 173,\n    \"name\": \"try-hard\",\n    \"startyear\": 1732,\n    \"endyear\": 1789\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"382100a476e113efd7a18457424c9a6c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "61965549-38b6-43e1-a8ca-b51d14d22531",
+        "X-Runtime": "0.053055",
+        "Content-Length": "76"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

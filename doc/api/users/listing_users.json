@@ -16,7 +16,7 @@
       "request_path": "api/users",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"l8pRHcYLJu6PHIUynWPYWHr6e91aGHP2EaTdjrNiMtNKW2av15jwLV/FtTFUq0ZYj1KlusAUNol8goy+1aQvcw==\"",
+        "Authorization": "Token token=\"B8HeA5qEeVg3jF7cXHiidyXenYOplQwTPxn818BNGDcLJxWsR8RZm16r7F6n5tD/HstQraRZqac/UVFc4HckYg==\"",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -25,17 +25,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 194,\n    \"created_at\": \"2016-05-09T22:48:30.069Z\",\n    \"name\": \"Duane Gusikowski\",\n    \"email\": \"rodrigo_gaylord@walter.net\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 246,\n    \"created_at\": \"2016-05-09T23:18:41.857Z\",\n    \"name\": \"Malinda Conroy\",\n    \"email\": \"noelia@miller.co\"\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"bd97486d4bbbbfe8273a4fe8f8a7df51\"",
+        "ETag": "W/\"16d4c45c3f1118a2c8d446bb4c3fb313\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ecdb8268-ed17-45a2-96fe-4a26f881f0a0",
-        "X-Runtime": "0.034724",
-        "Content-Length": "115"
+        "X-Request-Id": "37607cdf-2e78-408b-b3cb-6abaf0f3e948",
+        "X-Runtime": "0.015184",
+        "Content-Length": "103"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

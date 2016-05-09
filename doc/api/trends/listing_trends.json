@@ -24,31 +24,31 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/users/193/trends?trend=%23%3CTrend%3A0x007f98a4110f00%3E&name=carry",
+      "request_path": "api/users/245/trends?trend=%23%3CTrend%3A0x007faae2e4f798%3E&name=goth",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"H6QhVQJYaUIS/kUO4zc3p6NsUMD8NdBEEabSKQg9YZXQFeXLu7yWJlO+L5SQQDNbMRaLM6je2Fz7nS0Mu2tj3g==\"",
+        "Authorization": "Token token=\"RdzvhYQpg4RvO+d2w/axufYqAhQ/YvK/MBUC4a4d4LcVBP5auMYVo95rSggc9o14D/weQ+V3z7nY8GcUK/yrGA==\"",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "trend": "#<Trend:0x007f98a4110f00>",
-        "name": "carry"
+        "trend": "#<Trend:0x007faae2e4f798>",
+        "name": "goth"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 135,\n    \"name\": \"carry\",\n    \"user_id\": 193\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 174,\n    \"name\": \"goth\",\n    \"user_id\": 245\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"bc46bfbec03ec2b00bd8d09602f31d35\"",
+        "ETag": "W/\"4081868b4225dec3abce23cc3e6d9df7\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7119253b-4474-44e2-85f7-18aa43f2f7e8",
-        "X-Runtime": "0.060989",
-        "Content-Length": "41"
+        "X-Request-Id": "d9511ed7-1dd9-448e-8562-08783f8e9d36",
+        "X-Runtime": "0.028917",
+        "Content-Length": "40"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -18,6 +18,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'rspec_api_documentation'
+  gem 'raddocs'
+  gem 'sinatra', github: 'sinatra/sinatra'
 end
 
 group :test do

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Raddocs::App => "/docs"
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:index, :create, :destroy] do
       resources :trends
