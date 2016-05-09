@@ -1,0 +1,44 @@
+{
+  "resource": "Users",
+  "http_method": "GET",
+  "route": "api/users",
+  "description": "Listing Users",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/users",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"l8pRHcYLJu6PHIUynWPYWHr6e91aGHP2EaTdjrNiMtNKW2av15jwLV/FtTFUq0ZYj1KlusAUNol8goy+1aQvcw==\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 194,\n    \"created_at\": \"2016-05-09T22:48:30.069Z\",\n    \"name\": \"Duane Gusikowski\",\n    \"email\": \"rodrigo_gaylord@walter.net\"\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"bd97486d4bbbbfe8273a4fe8f8a7df51\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ecdb8268-ed17-45a2-96fe-4a26f881f0a0",
+        "X-Runtime": "0.034724",
+        "Content-Length": "115"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

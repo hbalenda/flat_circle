@@ -1,0 +1,35 @@
+{
+  "resources": [
+    {
+      "name": "Trends",
+      "examples": [
+        {
+          "description": "Listing trends",
+          "link": "trends/listing_trends.json",
+          "groups": "all",
+          "route": "api/users/:user_id/trends",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Listing Users",
+          "link": "users/listing_users.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "get"
+        },
+        {
+          "description": "Listing occurrences",
+          "link": "users/listing_occurrences.json",
+          "groups": "all",
+          "route": "api/trends/:trend_id/occurrences",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
