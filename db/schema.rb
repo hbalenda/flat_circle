@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_160_428_005_108) do
+ActiveRecord::Schema.define(version: 20160428005108) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,9 +23,8 @@ ActiveRecord::Schema.define(version: 20_160_428_005_108) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "trend_id"
+    t.index ["trend_id"], name: "index_occurrences_on_trend_id", using: :btree
   end
-
-  add_index "occurrences", ["trend_id"], name: "index_occurrences_on_trend_id", using: :btree
 
   create_table "predictions", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -37,9 +37,8 @@ ActiveRecord::Schema.define(version: 20_160_428_005_108) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.index ["user_id"], name: "index_trends_on_user_id", using: :btree
   end
-
-  add_index "trends", ["user_id"], name: "index_trends_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -49,4 +48,5 @@ ActiveRecord::Schema.define(version: 20_160_428_005_108) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
 end
