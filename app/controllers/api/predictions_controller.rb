@@ -10,4 +10,10 @@ class Api::PredictionsController < ApiController
     end
     render json: arr
   end
+
+  private
+
+  def prediction_params
+    params.require(:prediction).permit(:year)
+  end
 end
