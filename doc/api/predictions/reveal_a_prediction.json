@@ -1,0 +1,82 @@
+{
+  "resource": "Predictions",
+  "http_method": "GET",
+  "route": "api/predictions/:prediction_id",
+  "description": "Reveal a Prediction",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "prediction",
+      "description": "Prediction"
+    },
+    {
+      "name": "prediction_id",
+      "description": "Prediction ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/predictions/1?prediction=%23%3CPrediction%3A0x007fa8471649e0%3E",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"Auz5vduiI+CQRNpZDxGc3Re/J9CGu5dA8C0nRpN/Cb0nXzgjBwhkR0K0QIXlunDhyx77YOBD09iaSlQpVR/Hlw==\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "prediction": "#<Prediction:0x007fa8471649e0>"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  \"cleanse\",\n  \"literally\",\n  \"pickled\",\n  \"stumptown\",\n  \"blog\",\n  \"locavore\",\n  \"hashtag\",\n  \"wayfarers\",\n  \"sartorial\",\n  \"vinyl\",\n  \"hoodie\",\n  \"gastropub\"\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a5acf85a4da4a2337a0f5b50baa89151\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "3b3df405-4fcc-46ca-93db-b9251dbfbabc",
+        "X-Runtime": "0.264128",
+        "Content-Length": "126"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    },
+    {
+      "request_method": "GET",
+      "request_path": "api/predictions/1?prediction=%23%3CPrediction%3A0x007fa8471649e0%3E",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"Auz5vduiI+CQRNpZDxGc3Re/J9CGu5dA8C0nRpN/Cb0nXzgjBwhkR0K0QIXlunDhyx77YOBD09iaSlQpVR/Hlw==\"",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "prediction": "#<Prediction:0x007fa8471649e0>"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  \"cleanse\",\n  \"literally\",\n  \"pickled\",\n  \"stumptown\",\n  \"blog\",\n  \"locavore\",\n  \"hashtag\",\n  \"wayfarers\",\n  \"sartorial\",\n  \"vinyl\",\n  \"hoodie\",\n  \"gastropub\"\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a5acf85a4da4a2337a0f5b50baa89151\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c1b5c7c4-8f24-45a1-b401-7510c17ddf62",
+        "X-Runtime": "0.244203",
+        "Content-Length": "126"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

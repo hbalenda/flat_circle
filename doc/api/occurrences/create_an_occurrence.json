@@ -1,27 +1,32 @@
 {
   "resource": "Occurrences",
-  "http_method": "GET",
+  "http_method": "POST",
   "route": "api/trends/:trend_id/occurrences",
-  "description": "Listing Occurrences",
+  "description": "Create An Occurrence",
   "explanation": null,
   "parameters": [
     {
+      "scope": "occurrence",
       "name": "occurrence",
       "description": "Occurrence"
     },
     {
+      "scope": "occurrence",
       "name": "name",
       "description": "Name"
     },
     {
+      "scope": "occurrence",
       "name": "startyear",
       "description": "Start Year"
     },
     {
+      "scope": "occurrence",
       "name": "endyear",
       "description": "End Year"
     },
     {
+      "scope": "occurrence",
       "name": "trend_id",
       "description": "Trend ID"
     }
@@ -31,34 +36,31 @@
   ],
   "requests": [
     {
-      "request_method": "GET",
-      "request_path": "api/trends/53/occurrences?occurrence=%23%3COccurrence%3A0x007fa844e55ad0%3E&name=gentrify&startyear=1539&endyear=1604",
-      "request_body": null,
+      "request_method": "POST",
+      "request_path": "api/trends/54/occurrences",
+      "request_body": "occurrence[occurrence]=%23%3COccurrence%3A0x007fa844e21258%3E&occurrence[name]=gentrify&occurrence[startyear]=1847&occurrence[endyear]=1850&occurrence[trend_id]=54",
       "request_headers": {
-        "Authorization": "Token token=\"2hB73GOvWhqGuRAwvBGWXOdaQAjVAcQ6YA3nsfrR38vTP/gG/M0Yu5hhNvQVSOB/ceyoh7A38w+0ivhpqOa9jw==\"",
+        "Authorization": "Token token=\"Yf5TQdggmXJDrAwLbYF8r96wtaJi49AY9ZZq0CZp25QqhIJD2in6QBufsbGJRixrmQcjNdrQQtK0+127baeTBw==\"",
         "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "occurrence": "#<Occurrence:0x007fa844e55ad0>",
-        "name": "gentrify",
-        "startyear": "1539",
-        "endyear": "1604"
       },
-      "request_content_type": null,
+      "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n\n]",
+      "response_body": "{\n  \"id\": 1,\n  \"trend_id\": 54,\n  \"name\": \"gentrify\",\n  \"startyear\": 1847,\n  \"endyear\": 1850\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4f53cda18c2baa0c0354bb5f9a3ecbe5\"",
+        "ETag": "W/\"7d7d29369261822ab5d2c134cc41b198\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "6d1f00ae-729e-419a-b86d-614dec97ab48",
-        "X-Runtime": "0.045369",
-        "Content-Length": "2"
+        "X-Request-Id": "09531abf-787a-417e-8690-9f09f069a95a",
+        "X-Runtime": "0.025928",
+        "Content-Length": "72"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

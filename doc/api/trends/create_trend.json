@@ -1,0 +1,54 @@
+{
+  "resource": "Trends",
+  "http_method": "POST",
+  "route": "api/users/:user_id/trends",
+  "description": "Create Trend",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "trend",
+      "name": "user_id",
+      "description": "User ID"
+    },
+    {
+      "scope": "trend",
+      "name": "name",
+      "description": "Trend Name"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/users/5/trends",
+      "request_body": "trend[user_id]=5&trend[name]=waistcoat",
+      "request_headers": {
+        "Authorization": "Token token=\"ZBrqZ5r7G6e3o5NFY9dxzP7Ifz4OVeKcXeGAcw/QzPTWg2dgK7PUqQOMdLobi6YzZnLKIspMY807/NXTJtf0DA==\"",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 52,\n  \"name\": \"waistcoat\",\n  \"user_id\": 5\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"f87e6cfdd070f15b2c233350c808e788\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "58c128f6-95d6-481c-b9b4-6c72fd85e9de",
+        "X-Runtime": "0.014806",
+        "Content-Length": "40"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

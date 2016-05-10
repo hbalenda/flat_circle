@@ -2,7 +2,7 @@
   "resource": "Trends",
   "http_method": "GET",
   "route": "api/users/:user_id/trends",
-  "description": "Listing trends",
+  "description": "Listing Trends",
   "explanation": null,
   "parameters": [
     {
@@ -24,31 +24,31 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/users/245/trends?trend=%23%3CTrend%3A0x007faae2e4f798%3E&name=goth",
+      "request_path": "api/users/4/trends?trend=%23%3CTrend%3A0x007fa844ae9bf8%3E&name=normcore",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"RdzvhYQpg4RvO+d2w/axufYqAhQ/YvK/MBUC4a4d4LcVBP5auMYVo95rSggc9o14D/weQ+V3z7nY8GcUK/yrGA==\"",
+        "Authorization": "Token token=\"gZKMpjoU8xTZYFfLaOPl+tgFglKCf2Ekr/O9+njEjHvv1W8lIQzDd/O6r0X5JMgHSIfa3GPuPLS8xPgFKI5ptw==\"",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "trend": "#<Trend:0x007faae2e4f798>",
-        "name": "goth"
+        "trend": "#<Trend:0x007fa844ae9bf8>",
+        "name": "normcore"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 174,\n    \"name\": \"goth\",\n    \"user_id\": 245\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 51,\n    \"name\": \"normcore\",\n    \"user_id\": 4\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4081868b4225dec3abce23cc3e6d9df7\"",
+        "ETag": "W/\"18728583b05160d9a287f85e4b8fadb4\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "d9511ed7-1dd9-448e-8562-08783f8e9d36",
-        "X-Runtime": "0.028917",
-        "Content-Length": "40"
+        "X-Request-Id": "83f7e201-4b38-482c-95e0-108b72a676b0",
+        "X-Runtime": "0.009580",
+        "Content-Length": "41"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

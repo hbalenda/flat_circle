@@ -4,7 +4,14 @@
       "name": "Occurrences",
       "examples": [
         {
-          "description": "Listing occurrences",
+          "description": "Create An Occurrence",
+          "link": "occurrences/create_an_occurrence.json",
+          "groups": "all",
+          "route": "api/trends/:trend_id/occurrences",
+          "method": "post"
+        },
+        {
+          "description": "Listing Occurrences",
           "link": "occurrences/listing_occurrences.json",
           "groups": "all",
           "route": "api/trends/:trend_id/occurrences",
@@ -13,10 +20,29 @@
       ]
     },
     {
+      "name": "Predictions",
+      "examples": [
+        {
+          "description": "Reveal a Prediction",
+          "link": "predictions/reveal_a_prediction.json",
+          "groups": "all",
+          "route": "api/predictions/:prediction_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Trends",
       "examples": [
         {
-          "description": "Listing trends",
+          "description": "Create Trend",
+          "link": "trends/create_trend.json",
+          "groups": "all",
+          "route": "api/users/:user_id/trends",
+          "method": "post"
+        },
+        {
+          "description": "Listing Trends",
           "link": "trends/listing_trends.json",
           "groups": "all",
           "route": "api/users/:user_id/trends",
@@ -27,6 +53,13 @@
     {
       "name": "Users",
       "examples": [
+        {
+          "description": "Create User",
+          "link": "users/create_user.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "post"
+        },
         {
           "description": "Listing Users",
           "link": "users/listing_users.json",

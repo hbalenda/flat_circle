@@ -16,7 +16,7 @@
       "request_path": "api/users",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"B8HeA5qEeVg3jF7cXHiidyXenYOplQwTPxn818BNGDcLJxWsR8RZm16r7F6n5tD/HstQraRZqac/UVFc4HckYg==\"",
+        "Authorization": "Token token=\"qDVQxms71/dBW0eghqgiyynbySvse9o/FanjzLxi3RyFcQroat1PlRXVs/dpwi5gE7NaX+8kDv2jyaCSZBHGag==\"",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -25,17 +25,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 246,\n    \"created_at\": \"2016-05-09T23:18:41.857Z\",\n    \"name\": \"Malinda Conroy\",\n    \"email\": \"noelia@miller.co\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 6,\n    \"created_at\": \"2016-05-10T21:02:21.155Z\",\n    \"name\": \"Abbey Bergstrom IV\",\n    \"email\": \"everardo.kozey@walshleannon.org\"\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"16d4c45c3f1118a2c8d446bb4c3fb313\"",
+        "ETag": "W/\"6b2b64c7a32a128bb45e27394ca3c0da\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "37607cdf-2e78-408b-b3cb-6abaf0f3e948",
-        "X-Runtime": "0.015184",
-        "Content-Length": "103"
+        "X-Request-Id": "f33c443b-487c-45d7-a3c9-fc1e3900f767",
+        "X-Runtime": "0.010938",
+        "Content-Length": "120"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
