@@ -27,6 +27,7 @@ group :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
   gem 'shoulda'
+  gem 'database_cleaner'
 end
 
 group :development do
