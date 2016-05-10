@@ -39,7 +39,7 @@ RSpec.describe Api::TrendsController, type: :controller do
     end
 
     describe 'POST create' do
-      before { post :create, params: { trend: { name: "New Trend", user_id: @trend.user_id } } }
+      before { post :create, params: { trend: { name: 'New Trend', user_id: @trend.user_id } } }
 
       it 'POST create returns http authenticated' do
         expect(response).to have_http_status(:success)
@@ -51,7 +51,7 @@ RSpec.describe Api::TrendsController, type: :controller do
 
       it 'creates a trend with the correct attributes' do
         hashed_json = JSON.parse(response.body)
-        expect(hashed_json['name']).to eq("New Trend")
+        expect(hashed_json['name']).to eq('New Trend')
       end
     end
 
