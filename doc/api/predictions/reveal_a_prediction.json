@@ -3,12 +3,8 @@
   "http_method": "GET",
   "route": "api/predictions/:prediction_id",
   "description": "Reveal a Prediction",
-  "explanation": null,
+  "explanation": "Predictions are created with a \"year\" attribute (e.g. 2082 or 1970). GET api/predictions/:id combs through the database and returns trends that were or will be \"in\" that year.",
   "parameters": [
-    {
-      "name": "prediction",
-      "description": "Prediction"
-    },
     {
       "name": "prediction_id",
       "description": "Prediction ID"
@@ -20,63 +16,30 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/predictions/1?prediction=%23%3CPrediction%3A0x007fa8471649e0%3E",
+      "request_path": "api/predictions/1",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"Auz5vduiI+CQRNpZDxGc3Re/J9CGu5dA8C0nRpN/Cb0nXzgjBwhkR0K0QIXlunDhyx77YOBD09iaSlQpVR/Hlw==\"",
-        "Host": "example.org",
-        "Cookie": ""
+        "Authorization": "Token token=\"9gjawbrgmi6T7x8QbJHM5+qlPJuzPDLrldn6gX3WLbGLbo2pcL+4bv1oKNW8vW4CQ19hwtl63rQ0E/Q5pKZhIQ==\""
       },
       "request_query_parameters": {
-        "prediction": "#<Prediction:0x007fa8471649e0>"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  \"cleanse\",\n  \"literally\",\n  \"pickled\",\n  \"stumptown\",\n  \"blog\",\n  \"locavore\",\n  \"hashtag\",\n  \"wayfarers\",\n  \"sartorial\",\n  \"vinyl\",\n  \"hoodie\",\n  \"gastropub\"\n]",
+      "response_body": "[\n  \"pinterest\",\n  \"pitchfork\",\n  \"heirloom\",\n  \"seitan\",\n  \"authentic\",\n  \"post-ironic\",\n  \"kogi\",\n  \"drinking\",\n  \"lumbersexual\",\n  \"listicle\",\n  \"farm-to-table\",\n  \"90's\",\n  \"waistcoat\",\n  \"ennui\",\n  \"leggings\",\n  \"cred\",\n  \"ramps\",\n  \"mixtape\",\n  \"humblebrag\",\n  \"mustache\",\n  \"+1\"\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a5acf85a4da4a2337a0f5b50baa89151\"",
+        "ETag": "W/\"2a70b94c189c19001cd4a9b3fa3d37ed\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3b3df405-4fcc-46ca-93db-b9251dbfbabc",
-        "X-Runtime": "0.264128",
-        "Content-Length": "126"
+        "X-Request-Id": "c913a57b-e575-4ffc-9291-3f82780605f4",
+        "X-Runtime": "0.237263",
+        "Content-Length": "223"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
-    },
-    {
-      "request_method": "GET",
-      "request_path": "api/predictions/1?prediction=%23%3CPrediction%3A0x007fa8471649e0%3E",
-      "request_body": null,
-      "request_headers": {
-        "Authorization": "Token token=\"Auz5vduiI+CQRNpZDxGc3Re/J9CGu5dA8C0nRpN/Cb0nXzgjBwhkR0K0QIXlunDhyx77YOBD09iaSlQpVR/Hlw==\"",
-        "Host": "example.org",
-        "Cookie": ""
-      },
-      "request_query_parameters": {
-        "prediction": "#<Prediction:0x007fa8471649e0>"
-      },
-      "request_content_type": null,
-      "response_status": 200,
-      "response_status_text": "OK",
-      "response_body": "[\n  \"cleanse\",\n  \"literally\",\n  \"pickled\",\n  \"stumptown\",\n  \"blog\",\n  \"locavore\",\n  \"hashtag\",\n  \"wayfarers\",\n  \"sartorial\",\n  \"vinyl\",\n  \"hoodie\",\n  \"gastropub\"\n]",
-      "response_headers": {
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-XSS-Protection": "1; mode=block",
-        "X-Content-Type-Options": "nosniff",
-        "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a5acf85a4da4a2337a0f5b50baa89151\"",
-        "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c1b5c7c4-8f24-45a1-b401-7510c17ddf62",
-        "X-Runtime": "0.244203",
-        "Content-Length": "126"
-      },
-      "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"localhost:3000api/predictions/1\" -X GET \\\n\t-H \"Authorization: Token token=\\\"9gjawbrgmi6T7x8QbJHM5+qlPJuzPDLrldn6gX3WLbGLbo2pcL+4bv1oKNW8vW4CQ19hwtl63rQ0E/Q5pKZhIQ==\\\"\""
     }
   ]
 }

@@ -1,0 +1,45 @@
+{
+  "resource": "Trends",
+  "http_method": "GET",
+  "route": "api/users/:user_id/trends",
+  "description": "Listing A User's Trends",
+  "explanation": "Shows trends created by a specific user",
+  "parameters": [
+    {
+      "name": "user_id",
+      "description": "User ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/users/5/trends",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"8i+WXLKFn9UlGW3b+VboBBJXUv3PvzZK8nu4fHkR1TgeT+KC8449r/v7ZSOS7AteAmcSrt26pwEYxrlnJH+g2g==\""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 58,\n    \"name\": \"vice\",\n    \"user_id\": 5\n  },\n  {\n    \"id\": 59,\n    \"name\": \"pabst\",\n    \"user_id\": 5\n  },\n  {\n    \"id\": 60,\n    \"name\": \"lumbersexual\",\n    \"user_id\": 5\n  },\n  {\n    \"id\": 61,\n    \"name\": \"+1\",\n    \"user_id\": 5\n  },\n  {\n    \"id\": 62,\n    \"name\": \"ramps\",\n    \"user_id\": 5\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"041c50f2a2a2815564e3880a97c5ec80\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "340afd79-a9fb-42e9-9484-d3d20e716d69",
+        "X-Runtime": "0.006485",
+        "Content-Length": "189"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"localhost:3000api/users/5/trends\" -X GET \\\n\t-H \"Authorization: Token token=\\\"8i+WXLKFn9UlGW3b+VboBBJXUv3PvzZK8nu4fHkR1TgeT+KC8449r/v7ZSOS7AteAmcSrt26pwEYxrlnJH+g2g==\\\"\""
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "resource": "Trends",
+  "http_method": "GET",
+  "route": "api/trends",
+  "description": "Listing All Trends",
+  "explanation": "Shows all trends in the database",
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/trends",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"/kMMvXoJexbHggHaJJFIjloluKxS4Hx9mDWvXqvEHbH9D4ZPWkV9XPrgGoZSk9+4BOJHjhsRsFsZYzsmuCeTtA==\""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 53,\n    \"name\": \"kombucha\",\n    \"user_id\": 4\n  },\n  {\n    \"id\": 54,\n    \"name\": \"cred\",\n    \"user_id\": 4\n  },\n  {\n    \"id\": 55,\n    \"name\": \"Godard\",\n    \"user_id\": 4\n  },\n  {\n    \"id\": 56,\n    \"name\": \"wolf\",\n    \"user_id\": 4\n  },\n  {\n    \"id\": 57,\n    \"name\": \"asymmetrical\",\n    \"user_id\": 4\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ed3e24d42fc16ed798ca52450f78fee2\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d57ec446-6b3b-4b49-b102-f68e254dbf6c",
+        "X-Runtime": "0.010257",
+        "Content-Length": "195"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"localhost:3000api/trends\" -X GET \\\n\t-H \"Authorization: Token token=\\\"/kMMvXoJexbHggHaJJFIjloluKxS4Hx9mDWvXqvEHbH9D4ZPWkV9XPrgGoZSk9+4BOJHjhsRsFsZYzsmuCeTtA==\\\"\""
+    }
+  ]
+}

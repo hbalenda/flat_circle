@@ -4,8 +4,8 @@
       "name": "Occurrences",
       "examples": [
         {
-          "description": "Create An Occurrence",
-          "link": "occurrences/create_an_occurrence.json",
+          "description": "Create Occurrence",
+          "link": "occurrences/create_occurrence.json",
           "groups": "all",
           "route": "api/trends/:trend_id/occurrences",
           "method": "post"
@@ -42,10 +42,17 @@
           "method": "post"
         },
         {
-          "description": "Listing Trends",
-          "link": "trends/listing_trends.json",
+          "description": "Listing A User's Trends",
+          "link": "trends/listing_a_user's_trends.json",
           "groups": "all",
           "route": "api/users/:user_id/trends",
+          "method": "get"
+        },
+        {
+          "description": "Listing All Trends",
+          "link": "trends/listing_all_trends.json",
+          "groups": "all",
+          "route": "api/trends",
           "method": "get"
         }
       ]

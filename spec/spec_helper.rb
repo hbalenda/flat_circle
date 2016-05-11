@@ -100,4 +100,7 @@ RSpec.configure do |config|
 end
 RspecApiDocumentation.configure do |config|
   config.format = :json
+  config.request_headers_to_include = 'Authorization'
+  config.curl_host = 'localhost:3000'
+  config.curl_headers_to_filter = ['Host', 'Cookie']
 end

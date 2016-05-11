@@ -3,13 +3,8 @@
   "http_method": "POST",
   "route": "api/users",
   "description": "Create User",
-  "explanation": null,
+  "explanation": "Users register with name, email, and password.",
   "parameters": [
-    {
-      "scope": "user",
-      "name": "user",
-      "description": "User"
-    },
     {
       "scope": "user",
       "name": "name",
@@ -33,32 +28,29 @@
     {
       "request_method": "POST",
       "request_path": "api/users",
-      "request_body": "user[user]=%23%3CUser%3A0x007fa844f387b8%3E&user[name]=Tara+Harvey&user[email]=gavin%40turner.biz&user[password]=password",
+      "request_body": "user[name]=Wilbert+Feeney+II&user[email]=orville_koepp%40ryan.biz&user[password]=password",
       "request_headers": {
-        "Authorization": "Token token=\"rlFJHCzTfBmO223gkkcb7dLZiBCJ2o3M22PWfjjWwnI708UndNTP0r1GM2SyN/N22O9Tmp4aZGvUQ0HL2BHwfg==\"",
-        "Host": "example.org",
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Cookie": ""
+        "Authorization": "Token token=\"3AbCHe9dk9U+YnHb1jUbgpRJwrUd+qA0uQ0GS+5W00zzd0tIp6N3OU9Cg345Qfo9PGbFF2VGXfpQ6eeyftSlEg==\""
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 8,\n  \"created_at\": \"2016-05-10T21:02:21.193Z\",\n  \"name\": \"Tara Harvey\",\n  \"email\": \"gavin@turner.biz\"\n}",
+      "response_body": "{\n  \"id\": 9,\n  \"created_at\": \"2016-05-11T22:54:53.038Z\",\n  \"name\": \"Wilbert Feeney II\",\n  \"email\": \"orville_koepp@ryan.biz\"\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"08eda5e345bb0b51656a7711a92ecf23\"",
+        "ETag": "W/\"db91c482cf12462900511d768dafda46\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "2937fba6-838f-403d-9365-639c97574ff9",
-        "X-Runtime": "0.012645",
-        "Content-Length": "96"
+        "X-Request-Id": "0a61996e-3a67-4c30-9892-f7756babf6c8",
+        "X-Runtime": "0.015252",
+        "Content-Length": "108"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"localhost:3000api/users\" -d 'user[name]=Wilbert+Feeney+II&user[email]=orville_koepp%40ryan.biz&user[password]=password' -X POST \\\n\t-H \"Authorization: Token token=\\\"3AbCHe9dk9U+YnHb1jUbgpRJwrUd+qA0uQ0GS+5W00zzd0tIp6N3OU9Cg345Qfo9PGbFF2VGXfpQ6eeyftSlEg==\\\"\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\""
     }
   ]
 }

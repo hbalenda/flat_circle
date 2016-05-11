@@ -3,24 +3,8 @@
   "http_method": "GET",
   "route": "api/trends/:trend_id/occurrences",
   "description": "Listing Occurrences",
-  "explanation": null,
+  "explanation": "Shows occurrences belonging to a specified trend.",
   "parameters": [
-    {
-      "name": "occurrence",
-      "description": "Occurrence"
-    },
-    {
-      "name": "name",
-      "description": "Name"
-    },
-    {
-      "name": "startyear",
-      "description": "Start Year"
-    },
-    {
-      "name": "endyear",
-      "description": "End Year"
-    },
     {
       "name": "trend_id",
       "description": "Trend ID"
@@ -32,36 +16,30 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/trends/53/occurrences?occurrence=%23%3COccurrence%3A0x007fa844e55ad0%3E&name=gentrify&startyear=1539&endyear=1604",
+      "request_path": "api/trends/1/occurrences",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"2hB73GOvWhqGuRAwvBGWXOdaQAjVAcQ6YA3nsfrR38vTP/gG/M0Yu5hhNvQVSOB/ceyoh7A38w+0ivhpqOa9jw==\"",
-        "Host": "example.org",
-        "Cookie": ""
+        "Authorization": "Token token=\"3KajWJ6qrpjic4NtVwZQr7/rNKVHwiF408ik9eJDXawT6QvIKau86kvBlWkckIAXHo+i34HB21VsgvGWBk04wQ==\""
       },
       "request_query_parameters": {
-        "occurrence": "#<Occurrence:0x007fa844e55ad0>",
-        "name": "gentrify",
-        "startyear": "1539",
-        "endyear": "1604"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n\n]",
+      "response_body": "[\n  {\n    \"id\": 2,\n    \"trend_id\": 1,\n    \"name\": \"authentic\",\n    \"startyear\": 1705,\n    \"endyear\": 1745\n  },\n  {\n    \"id\": 1,\n    \"trend_id\": 1,\n    \"name\": \"authentic\",\n    \"startyear\": 1938,\n    \"endyear\": 1986\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4f53cda18c2baa0c0354bb5f9a3ecbe5\"",
+        "ETag": "W/\"6ce9b49f2a92da700150f1fe8b1b53db\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "6d1f00ae-729e-419a-b86d-614dec97ab48",
-        "X-Runtime": "0.045369",
-        "Content-Length": "2"
+        "X-Request-Id": "832763de-7298-44bb-81c6-7db7a21caff8",
+        "X-Runtime": "0.042244",
+        "Content-Length": "147"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"localhost:3000api/trends/1/occurrences\" -X GET \\\n\t-H \"Authorization: Token token=\\\"3KajWJ6qrpjic4NtVwZQr7/rNKVHwiF408ik9eJDXawT6QvIKau86kvBlWkckIAXHo+i34HB21VsgvGWBk04wQ==\\\"\""
     }
   ]
 }

@@ -11,14 +11,12 @@ resource 'Predictions' do
   end
 
   get 'api/predictions/:prediction_id' do
-    parameter :prediction, 'Prediction'
     parameter :prediction_id, 'Prediction ID'
 
-    let(:prediction) { @prediction }
     let(:prediction_id) { @prediction.id }
 
     example 'Reveal a Prediction' do
-      explanation 'This combs through the database and returns the trends that will be "in".'
+      explanation 'Predictions are created with a "year" attribute (e.g. 2082 or 1970). GET api/predictions/:id combs through the database and returns trends that were or will be "in" that year.'
       do_request
       expect(status).to eq(200)
     end

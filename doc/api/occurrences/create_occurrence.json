@@ -1,0 +1,66 @@
+{
+  "resource": "Occurrences",
+  "http_method": "POST",
+  "route": "api/trends/:trend_id/occurrences",
+  "description": "Create Occurrence",
+  "explanation": "Occurrences are instances of a trend with a distinct start and end year. A trend must have at least two occurrences to be used to generate future occurrences.",
+  "parameters": [
+    {
+      "scope": "occurrence",
+      "name": "occurrence",
+      "description": "Occurrence"
+    },
+    {
+      "scope": "occurrence",
+      "name": "name",
+      "description": "Name"
+    },
+    {
+      "scope": "occurrence",
+      "name": "startyear",
+      "description": "Start Year"
+    },
+    {
+      "scope": "occurrence",
+      "name": "endyear",
+      "description": "End Year"
+    },
+    {
+      "scope": "occurrence",
+      "name": "trend_id",
+      "description": "Trend ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/trends/69/occurrences",
+      "request_body": "occurrence[occurrence]=%23%3COccurrence%3A0x007fbf955fa418%3E&occurrence[name]=gastropub&occurrence[startyear]=1859&occurrence[endyear]=1861&occurrence[trend_id]=69",
+      "request_headers": {
+        "Authorization": "Token token=\"rHgUgQK9GXDN9kFGrseoIN+yZkIWy28+45bc9QFqbKe3iCKtIkjwICEd2efqWYOJeUIZY2H97wTr7/mxRD94MQ==\""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 5,\n  \"trend_id\": 69,\n  \"name\": \"gastropub\",\n  \"startyear\": 1859,\n  \"endyear\": 1861\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c1fec66c7b585f14a4ed482d10303f4a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "0f1c3df8-7bb8-4d9c-a460-4762066504e5",
+        "X-Runtime": "0.020275",
+        "Content-Length": "73"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"localhost:3000api/trends/69/occurrences\" -d 'occurrence[occurrence]=%23%3COccurrence%3A0x007fbf955fa418%3E&occurrence[name]=gastropub&occurrence[startyear]=1859&occurrence[endyear]=1861&occurrence[trend_id]=69' -X POST \\\n\t-H \"Authorization: Token token=\\\"rHgUgQK9GXDN9kFGrseoIN+yZkIWy28+45bc9QFqbKe3iCKtIkjwICEd2efqWYOJeUIZY2H97wTr7/mxRD94MQ==\\\"\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\""
+    }
+  ]
+}
