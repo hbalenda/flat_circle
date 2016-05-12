@@ -1,13 +1,13 @@
 {
   "resource": "Predictions",
   "http_method": "GET",
-  "route": "api/predictions/:prediction_id",
+  "route": "api/predictions?year=:year",
   "description": "Reveal a Prediction",
-  "explanation": "Predictions are created with a \"year\" attribute (e.g. 2082 or 1970). GET api/predictions/:id combs through the database and returns trends that were or will be \"in\" that year.",
+  "explanation": "Predictions have a \"year\" attribute (e.g. 2082 or 1970). This request combs through the database and returns trends that were or will be \"in\" that year.",
   "parameters": [
     {
-      "name": "prediction_id",
-      "description": "Prediction ID"
+      "name": "year",
+      "description": "Year"
     }
   ],
   "response_fields": [
@@ -16,30 +16,31 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/predictions/1",
+      "request_path": "api/predictions?year=2082",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Token token=\"9gjawbrgmi6T7x8QbJHM5+qlPJuzPDLrldn6gX3WLbGLbo2pcL+4bv1oKNW8vW4CQ19hwtl63rQ0E/Q5pKZhIQ==\""
+        "Authorization": "Token token=\"Z2fz/w8dIKUlkZLB+nXiikxNBPDGWmuq7m4QD7HuQdqXkVY2grWM0uH4lqaGi8MPYdyI32sKBMysFHXYbFE2iQ==\""
       },
       "request_query_parameters": {
+        "year": "2082"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  \"pinterest\",\n  \"pitchfork\",\n  \"heirloom\",\n  \"seitan\",\n  \"authentic\",\n  \"post-ironic\",\n  \"kogi\",\n  \"drinking\",\n  \"lumbersexual\",\n  \"listicle\",\n  \"farm-to-table\",\n  \"90's\",\n  \"waistcoat\",\n  \"ennui\",\n  \"leggings\",\n  \"cred\",\n  \"ramps\",\n  \"mixtape\",\n  \"humblebrag\",\n  \"mustache\",\n  \"+1\"\n]",
+      "response_body": "[\n  \"asymmetrical\",\n  \"Yuccie\",\n  \"actually\",\n  \"quinoa\",\n  \"plaid\",\n  \"stumptown\",\n  \"butcher\",\n  \"narwhal\",\n  \"portland\",\n  \"marfa\",\n  \"etsy\",\n  \"normcore\",\n  \"microdosing\",\n  \"mixtape\",\n  \"chartreuse\",\n  \"salvia\",\n  \"yr\",\n  \"squid\",\n  \"fixie\"\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"2a70b94c189c19001cd4a9b3fa3d37ed\"",
+        "ETag": "W/\"52ca07412feb4e13b539323cf78dbf89\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c913a57b-e575-4ffc-9291-3f82780605f4",
-        "X-Runtime": "0.237263",
-        "Content-Length": "223"
+        "X-Request-Id": "4a85e270-58c6-435a-98c9-71891e7f237d",
+        "X-Runtime": "0.239925",
+        "Content-Length": "189"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"localhost:3000api/predictions/1\" -X GET \\\n\t-H \"Authorization: Token token=\\\"9gjawbrgmi6T7x8QbJHM5+qlPJuzPDLrldn6gX3WLbGLbo2pcL+4bv1oKNW8vW4CQ19hwtl63rQ0E/Q5pKZhIQ==\\\"\""
+      "curl": "curl \"localhost:3000api/predictions?year=2082\" -X GET \\\n\t-H \"Authorization: Token token=\\\"Z2fz/w8dIKUlkZLB+nXiikxNBPDGWmuq7m4QD7HuQdqXkVY2grWM0uH4lqaGi8MPYdyI32sKBMysFHXYbFE2iQ==\\\"\""
     }
   ]
 }
