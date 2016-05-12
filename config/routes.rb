@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :create, :destroy] do
       resources :trends
     end
-    resources :predictions, only: [:show]
+    resources :predictions, only: [:index]
     resources :trends, only: [:index, :create, :destroy] do
       resources :occurrences, only: [:index, :create, :destroy]
     end
