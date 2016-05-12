@@ -1,0 +1,51 @@
+{
+  "resource": "Trends",
+  "http_method": "POST",
+  "route": "api/users/:user_id/trends",
+  "description": "Create Trend",
+  "explanation": "Trends have a name attribute and at least two occurrences.",
+  "parameters": [
+    {
+      "scope": "trend",
+      "name": "user_id",
+      "description": "User ID"
+    },
+    {
+      "scope": "trend",
+      "name": "name",
+      "description": "Trend Name"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/users/6/trends",
+      "request_body": "trend[user_id]=6&trend[name]=venmo",
+      "request_headers": {
+        "Authorization": "Token token=\"G/q64VuSGixsukP50xaoFTLcXmPS7Ds7HDpQZ+uxbwt4ka5bOE4OsnaWM40ddJepr7NCe/Tf99dLXnvSZw/Fxw==\""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 68,\n  \"name\": \"venmo\",\n  \"user_id\": 6\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ad1bf27c591723e766db7769d4293889\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "72d7ddf6-45e8-4698-a9aa-9c3e0f4ea190",
+        "X-Runtime": "0.012462",
+        "Content-Length": "36"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"localhost:3000api/users/6/trends\" -d 'trend[user_id]=6&trend[name]=venmo' -X POST \\\n\t-H \"Authorization: Token token=\\\"G/q64VuSGixsukP50xaoFTLcXmPS7Ds7HDpQZ+uxbwt4ka5bOE4OsnaWM40ddJepr7NCe/Tf99dLXnvSZw/Fxw==\\\"\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\""
+    }
+  ]
+}

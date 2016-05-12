@@ -1,9 +1,10 @@
 FactoryGirl.define do
   factory :occurrence do
     startyear do
+      # ensure uniqueness of startyears on a trend so crystal_ball() doesn't divide by zero
       loop do
         possible_startyear = Faker::Date.between(500.years.ago, 50.years.ago).year
-        break possible_startyear if !Occurrence.exists?(startyear: possible_startyear)
+        break possible_startyear unless Occurrence.exists?(startyear: possible_startyear)
       end
     end
 

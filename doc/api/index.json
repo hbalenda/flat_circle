@@ -1,0 +1,80 @@
+{
+  "resources": [
+    {
+      "name": "Occurrences",
+      "examples": [
+        {
+          "description": "Create Occurrence",
+          "link": "occurrences/create_occurrence.json",
+          "groups": "all",
+          "route": "api/trends/:trend_id/occurrences",
+          "method": "post"
+        },
+        {
+          "description": "Listing Occurrences",
+          "link": "occurrences/listing_occurrences.json",
+          "groups": "all",
+          "route": "api/trends/:trend_id/occurrences",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Predictions",
+      "examples": [
+        {
+          "description": "Reveal a Prediction",
+          "link": "predictions/reveal_a_prediction.json",
+          "groups": "all",
+          "route": "api/predictions/:prediction_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Trends",
+      "examples": [
+        {
+          "description": "Create Trend",
+          "link": "trends/create_trend.json",
+          "groups": "all",
+          "route": "api/users/:user_id/trends",
+          "method": "post"
+        },
+        {
+          "description": "Listing A User's Trends",
+          "link": "trends/listing_a_user's_trends.json",
+          "groups": "all",
+          "route": "api/users/:user_id/trends",
+          "method": "get"
+        },
+        {
+          "description": "Listing All Trends",
+          "link": "trends/listing_all_trends.json",
+          "groups": "all",
+          "route": "api/trends",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Create User",
+          "link": "users/create_user.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "post"
+        },
+        {
+          "description": "Listing Users",
+          "link": "users/listing_users.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

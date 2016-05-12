@@ -17,3 +17,6 @@ Style/Documentation:
 
 Metrics/LineLength:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false

@@ -12,11 +12,14 @@ gem 'puma', '~> 3.0'
 # Used for encrypting User passwords
 gem 'bcrypt'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+gem 'raddocs'
+gem 'sinatra', github: 'sinatra/sinatra'
 
 group :development, :test do
   gem 'faker'
   gem 'pry-rails'
   gem 'rubocop', require: false
+  gem 'rspec_api_documentation'
 end
 
 group :test do
@@ -24,6 +27,7 @@ group :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
   gem 'shoulda'
+  gem 'database_cleaner'
 end
 
 group :development do

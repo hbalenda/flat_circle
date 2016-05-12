@@ -9,7 +9,7 @@ RSpec.describe Api::PredictionsController, type: :controller do
 
   context 'unauthenticated user' do
     it 'GET show returns http unauthenticated' do
-      get :show, params: { id: prediction.id }
+      get :index, params: { id: prediction.id }
       expect(response).to have_http_status(401)
     end
   end
@@ -20,12 +20,12 @@ RSpec.describe Api::PredictionsController, type: :controller do
     end
 
     it 'GET show returns http authenticated' do
-      get :show, params: { id: prediction.id }
+      get :index, params: { id: prediction.id }
       expect(response).to have_http_status(200)
     end
 
     it 'returns json content type' do
-      get :show, params: { id: prediction.id }
+      get :index, params: { id: prediction.id }
       expect(response.content_type).to eq 'application/json'
     end
   end

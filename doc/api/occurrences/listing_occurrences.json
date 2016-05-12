@@ -1,0 +1,45 @@
+{
+  "resource": "Occurrences",
+  "http_method": "GET",
+  "route": "api/trends/:trend_id/occurrences",
+  "description": "Listing Occurrences",
+  "explanation": "Shows occurrences belonging to a specified trend.",
+  "parameters": [
+    {
+      "name": "trend_id",
+      "description": "Trend ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/trends/1/occurrences",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Token token=\"3KajWJ6qrpjic4NtVwZQr7/rNKVHwiF408ik9eJDXawT6QvIKau86kvBlWkckIAXHo+i34HB21VsgvGWBk04wQ==\""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 2,\n    \"trend_id\": 1,\n    \"name\": \"authentic\",\n    \"startyear\": 1705,\n    \"endyear\": 1745\n  },\n  {\n    \"id\": 1,\n    \"trend_id\": 1,\n    \"name\": \"authentic\",\n    \"startyear\": 1938,\n    \"endyear\": 1986\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"6ce9b49f2a92da700150f1fe8b1b53db\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "832763de-7298-44bb-81c6-7db7a21caff8",
+        "X-Runtime": "0.042244",
+        "Content-Length": "147"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"localhost:3000api/trends/1/occurrences\" -X GET \\\n\t-H \"Authorization: Token token=\\\"3KajWJ6qrpjic4NtVwZQr7/rNKVHwiF408ik9eJDXawT6QvIKau86kvBlWkckIAXHo+i34HB21VsgvGWBk04wQ==\\\"\""
+    }
+  ]
+}

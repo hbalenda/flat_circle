@@ -18,6 +18,13 @@ end
 
 occurrences = Occurrence.all
 
+10.times do
+  FactoryGirl.create(:prediction)
+end
+
+predictions = Prediction.all
+
 puts "#{users.count} users seeded"
 puts "#{trends.count} trends seeded"
 puts "#{occurrences.count} occurrences seeded"
+puts "#{predictions.count} prediction requests seeded"
