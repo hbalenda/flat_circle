@@ -1,11 +1,12 @@
 class Api::PredictionsController < ApiController
-  before_action :authenticate_user
 
   def index
     @year = params[:year].to_i
     arr = []
     Trend.all.each do |trend|
-      arr << trend.name if Prediction.crystal_ball(trend, @year) == true
+      if Prediction.crystal_ball(trend, @year) == true
+        arr << trend.name
+      end
     end
     render json: arr
   end
