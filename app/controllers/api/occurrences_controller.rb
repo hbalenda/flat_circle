@@ -1,6 +1,4 @@
 class Api::OccurrencesController < ApiController
-  before_action :authenticate_user
-
   def index
     occurrences = Occurrence.all
     render json: occurrences, each_serializer: OccurrenceSerializer

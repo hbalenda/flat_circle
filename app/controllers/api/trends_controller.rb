@@ -1,6 +1,4 @@
 class Api::TrendsController < ApiController
-  before_action :authenticate_user
-
   def index
     trends = Trend.all
     render json: trends, each_serializer: TrendSerializer

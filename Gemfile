@@ -8,7 +8,7 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 # Used for encrypting User passwords
 gem 'bcrypt'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
