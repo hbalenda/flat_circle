@@ -7,13 +7,14 @@ class Prediction < ApplicationRecord
       calc_averages(trend)
       last_endyear = @occurrences.flatten.last
       if year <= last_endyear
-        @occurrences.any? { |x| year.between?(x.first, x.last) }
+          return true
       else
-        prediction = (year - last_endyear) % (@avg_period + @avg_lull)
-        if prediction > @avg_lull
-          true
-        else
-          false
+        years_into_cycle = (year - last_endyear) % @lifecycle
+        if years_into_cycle >= @avg_lull
+          @startyear = last_endyear + (@lifecycle * ((year - last_endyear)/@lifecycle).to_i) + ((year - last_endyear) % @lifecycle)
+          @endyear = @startyear + @avg_period
+          Occurrence.create!(name: trend.name, trend_id: trend.id, startyear: @startyear, endyear: @endyear)
+          return true
         end
       end
     end
@@ -31,5 +32,6 @@ class Prediction < ApplicationRecord
     end
     @avg_period = (@periods.sum.to_f / @periods.size).round
     @avg_lull = (@lulls.sum.to_f / @lulls.size).round
+    @lifecycle = @avg_period + @avg_lull
   end
 end

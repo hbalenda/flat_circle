@@ -5,7 +5,8 @@ class Api::PredictionsController < ApiController
     arr = []
     Trend.all.each do |trend|
       if Prediction.crystal_ball(trend, @year) == true
-        arr << trend.name
+        match = trend.occurrences.find { |x| @year.between?(x.startyear, x.endyear) }
+        arr << match
       end
     end
     render json: arr
