@@ -11,9 +11,10 @@ class Prediction < ApplicationRecord
       else
         years_into_cycle = (year - last_endyear) % @lifecycle
         if years_into_cycle >= @avg_lull
-          @startyear = last_endyear + (@lifecycle * ((year - last_endyear)/@lifecycle).to_i) + ((year - last_endyear) % @lifecycle)
+          @startyear = last_endyear + (@lifecycle * ((year - last_endyear)/@lifecycle).to_i) + @avg_lull
           @endyear = @startyear + @avg_period
-          Occurrence.create!(name: trend.name, trend_id: trend.id, startyear: @startyear, endyear: @endyear)
+          @cool = Occurrence.create!(name: trend.name, trend_id: trend.id, startyear: @startyear, endyear: @endyear)
+          binding.pry
           return true
         end
       end
